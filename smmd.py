@@ -14,6 +14,7 @@ class SMMD(MMD_GAN):
         with tf.variable_scope('loss'):
             print("!!!!Enter to Tf variable scope loss")
             self.g_loss = mmd.mmd2(kerGI)
+            print(self.g_loss)
             self.d_loss = -self.g_loss
             self.optim_name = 'kernel_loss'
         self.add_scaling()
